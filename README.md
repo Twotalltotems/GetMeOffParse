@@ -12,11 +12,11 @@ This is a simple to use VM that sets up docker containers of Mongo and parse ser
 * Run `vagrant up` from the root of this project.
 * Follow these [instructions](https://github.com/ParsePlatform/parse-dashboard) to install parse dashboard on your local machine using the ip address defined in the Vagrantfile
 * Use the following code to add point your iOS app to this instance of parse:
-```objective-c 
+```objective-c
   ParseClientConfiguration *config = [ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration>  _Nonnull configuration) {
         configuration.applicationId = @"your app id";
         configuration.clientKey = @"your client key";
-        configuration.server = @"http://192.168.69.69:1337/parse";
+        configuration.server = @"http://192.168.2.2:1337/parse";
   }];
   [Parse initializeWithConfiguration:config];
 ```

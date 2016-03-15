@@ -4,7 +4,7 @@
 PARSE_APPLICATION_ID=""
 PARSE_MASTER_KEY=""
 # This should come from the ip defined in the vagrant file
-MONGO_DEV_URL="mongodb://192.168.69.69:27017/dev"
+MONGO_DEV_URL="mongodb://192.168.2.2:27017/dev"
 
 # Update apt sources
 echo "Update apt sources"

@@ -4,7 +4,7 @@
 # Define the path the your cloud code cloud directory
 $path_to_cloud_code = "/path/to/cloud"
 #Define a local private ip address to use, this will be the address of parse server and the mogo db instance
-$ip_address = "192.168.69.69"
+$ip_address = "192.168.2.2"
 
 
 # All Vagrant configuration is done below. The "2" in Vagrant.configure

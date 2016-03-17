@@ -24,6 +24,9 @@ This is a simple to use VM that sets up docker containers of Mongo and parse ser
 
 ## Notes
 
+#### Cloud Code is Node now
+Because the Parse hosted Cloud Code isn’t running a full node environment, there may be subtle differences in how your Cloud Code runs in Parse Server.
+
 #### useMasterKey
 ```Parse.Cloud.useMasterKey();``` is not supported on parse server, instead add ```{useMasterKey:true}``` directly to your query.  
 ```query.get(objectId, {useMasterKey:true})```

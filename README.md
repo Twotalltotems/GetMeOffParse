@@ -20,3 +20,26 @@ This is a simple to use VM that sets up docker containers of Mongo and parse ser
   }];
   [Parse initializeWithConfiguration:config];
 ```
+
+
+## Notes
+
+#### useMasterKey
+```Parse.Cloud.useMasterKey();``` is not supported on parse server, instead add ```{useMasterKey:true}``` directly to your query.  
+```query.get(objectId, {useMasterKey:true})```
+
+#### Logging
+Parse dashboard does not support ```console.log()``` like it did when using parse service.
+Instead of using ```console.log```, you can use [winston](https://www.npmjs.com/package/winston) which comes downloaded with parse server. Using winston you can add logs to a log file on the server.  
+```
+var winston = require('winston');
+winston.add(winston.transports.File, { filename:  'logs/main_logs.log'});
+winston.log('info', 'Hello distributed log files!');
+```
+This will add a log message to a file located at /parse/logs/main_logs.log on the server container.
+To access these logs, run ```vagrant ssh``` from the directory that contains the Vagrantfile.
+Once you're in the VM run ```sudo docker exec -it parse-server bash``` to run a bash from inside the server container.
+From there you can view your logs file at /parse/logs/main_logs.log
+
+#### Cloud Code Server Url
+In order for cloud code to run any queries, it needs to know the location of the server. This can be done by adding teh server URL to the start of your cloud code file. If you chose 192.168.2.2 as your local server ip address, you would add ```Parse.serverURL = "http://192.168.2.2:1337/parse"``` to the top of your cloud code file.

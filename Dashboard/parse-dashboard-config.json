@@ -1,0 +1,10 @@
+{
+  "apps": [
+    {
+      "serverURL": "http://localhost:1337/parse",
+      "appId": "parse-server-test-app-id",
+      "masterKey": "parse-server-test-master-key",
+      "appName": "Parse Test"
+    }
+  ]
+}

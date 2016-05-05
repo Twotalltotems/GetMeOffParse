@@ -1,0 +1,17 @@
+{
+  "name": "parse-server-test",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app/index.js",
+  "dependencies": {
+    "express": "~4",
+    "parse-server": "~2"
+  },
+  "scripts": {
+    "start": "node app/index.js",
+    "test": "mocha"
+  },
+  "engines": {
+    "node": "4.4.3"
+  }
+}

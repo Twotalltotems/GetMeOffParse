@@ -3,7 +3,7 @@
 
 
 # Define the path to your project on your machine.
-$path_to_project_localy = "/path/to/project"
+$path_to_project_localy = "../ExampleApp"
 # Specify the path on the VM where you want your project to exist.
 $path_to_project_on_server = "/App"
 
